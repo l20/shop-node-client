@@ -47,5 +47,3 @@ This project uses several open source packages:
 * [Echarts](http://echarts.baidu.com)
 * [vue-echarts-v3](https://github.com/xlsdg/vue-echarts-v3)
 * [vue-socket.io](https://github.com/MetinSeylan/Vue-Socket.io)
-
-For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
