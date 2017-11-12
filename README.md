@@ -1,6 +1,9 @@
-# vue-shop
+# Introduction
 
-> Mall based on Vue & node
+> A mall full stack demo based on Vue2.0(front-end) & node(back-end).
+
+# [demo online](http://shop.alphagoo.cn)
+
 
 ## Build Setup
 
@@ -26,5 +29,18 @@ npm run e2e
 # run all tests
 npm test
 ```
+# Credits
+This project uses several open source packages:
+## front-end
+* [Vue](https://github.com/vuejs/vue)
+* [iView](https://github.com/iview/iview)
+* [vue-infinite-scroll](https://github.com/ElemeFE/vue-infinite-scroll)
+* [vue-lazyload](https://github.com/hilongjw/vue-lazyload)
+* [VueMarkdown](https://github.com/miaolz123/vue-markdown)
+* [MarkdownEditor](https://github.com/alecgorge/MarkdownEditor)&amp[mavon-editor](https://github.com/hinesboy/mavonEditor)&amp[Vue-SimpleMDE](https://github.com/F-loat/vue-simplemde)
+* [quillEditor](https://github.com/surmon-china/vue-quill-editor)
+* [Echarts](http://echarts.baidu.com)
+* [vue-echarts-v3](https://github.com/xlsdg/vue-echarts-v3)
+* [vue-socket.io](https://github.com/MetinSeylan/Vue-Socket.io)
 
 For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
