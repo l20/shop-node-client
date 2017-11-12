@@ -5,7 +5,7 @@
 
 # [demo online](http://shop.alphagoo.cn)
 
-## Build Setup
+# Build Setup
 
 ``` bash
 # install dependencies
@@ -19,6 +19,11 @@ npm run build
 
 # build for production and view the bundle analyzer report
 npm run build --report
+
+# deploy & running
+node .start.js
+or
+pm2 start .start.js
 
 # run unit tests
 npm run unit
