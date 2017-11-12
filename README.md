@@ -1,7 +1,7 @@
 # Introduction
 
 > An E-Mall full stack demo based on Vue2.0(front-end) & node(back-end).
-#### Notice: The back-end of this project is closed source,but you can use api.
+#### Tips: The back-end of this project is closed source at present,but you can use api.
 
 # [demo online](http://shop.alphagoo.cn)
 
@@ -22,9 +22,11 @@ npm run build --report
 
 # deploy & running
 node .start.js
-or
+# or pm2
 pm2 start .start.js
-
+# forever
+ forever start server.js
+ 
 # run unit tests
 npm run unit
 
