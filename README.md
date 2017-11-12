@@ -36,7 +36,7 @@ npm test
 ```
 # Credits
 This project uses several open source packages:
-## front-end
+## client
 * [Vue](https://github.com/vuejs/vue)
 * [iView](https://github.com/iview/iview)
 * [vue-infinite-scroll](https://github.com/ElemeFE/vue-infinite-scroll)
