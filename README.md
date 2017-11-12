@@ -25,8 +25,8 @@ node .start.js
 # or pm2
 pm2 start .start.js
 # forever
- forever start server.js
- 
+ forever start .start.js
+
 # run unit tests
 npm run unit
 

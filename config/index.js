@@ -6,10 +6,10 @@ module.exports = {
     env: require('./prod.env'),
     index: path.resolve(__dirname, '../dist/index.html'),
     assetsRoot: path.resolve(__dirname, '../dist'),
-    assetsSubDirectory: 'static.alphagoo.cn/shop',
-    // assetsPublicPath: 'shop.alphagoo.cn',
+    assetsSubDirectory: 'static',
+    // assetsPublicPath: 'http://static.alphagoo.cn',
     assetsPublicPath: '/',
-    productionSourceMap: false,
+    productionSourceMap: true,
     // Gzip off by default as many popular static hosts such as
     // Surge or Netlify already gzip all static assets for you.
     // Before setting to `true`, make sure to:
@@ -29,24 +29,38 @@ module.exports = {
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
     proxyTable: {
-      // '/v1': {
-      //   target:  URL
-      // },
-      // '/v1*': {
-      //   target: URL
-      // },
-      // '/user/*': {
-      //   target: URL
-      // },
-      // '/images/*': {
-      //   target: URL
-      // },
-      // '/images/users/(.*)/avatar/*': {
-      //   target: URL
-      // },
-      // '/socket.io/*': {
-      //   target: URL
-      // }
+      '/v1': {
+        target:  URL,
+        secure: false,
+        // 新增一行
+        changeOrigin: true,
+        // pathRewrite: {'^/v1': ''}
+      },
+       '/v1*': {
+        target:  URL,
+        secure: false,
+        changeOrigin: true
+      },
+      '/user/*': {
+        target:  URL,
+        secure: false,
+        changeOrigin: true
+      },
+      '/images/*': {
+        target:  URL,
+        secure: false,
+        changeOrigin: true
+      },
+      '/images/users/(.*)/avatar/*': {
+        target:  URL,
+        secure: false,
+        changeOrigin: true
+      },
+      '/socket.io/*': {
+        target:  URL,
+        secure: false,
+        changeOrigin: true
+      }
     },
     // CSS Sourcemaps off by default because relative paths are "buggy"
     // with this option, according to the CSS-Loader README
