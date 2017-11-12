@@ -1,0 +1,149 @@
+{
+  "status":"0",
+  "result":[
+    {
+        "productId":"10001",
+        "productName":"小米6",
+        "prodcutPrice":"2499",
+        "prodcutImg":"mi6.jpg",
+        "salePrice": "1234",
+        "productNum": "30",
+        "inventory": "8"
+      },
+    {
+      "productId":"10002",
+      "productName":"小米笔记本",
+      "prodcutPrice":"3999",
+      "prodcutImg":"note.jpg",
+      "salePrice": "1234",
+      "productNum": "30",
+      "inventory": "8"
+    },
+    {
+      "productId":"10003",
+      "productName":"小米6",
+      "prodcutPrice":"2499",
+      "prodcutImg":"mi6.jpg",
+      "salePrice": "1234",
+      "productNum": "30",
+      "inventory": "8"
+    },
+    {
+      "productId":"10004",
+      "productName":"小米6",
+      "prodcutPrice":"2499",
+      "prodcutImg":"1.jpg",
+      "salePrice": "1234",
+      "productNum": "30",
+      "inventory": "8"
+    },
+    {
+      "productId":"10005",
+      "productName":"小米6",
+      "prodcutPrice":"2499",
+      "prodcutImg":"2.jpg",
+      "salePrice": "1234",
+      "productNum": "30",
+      "inventory": "8"
+    },
+    {
+      "productId":"10002",
+      "productName":"小米笔记本",
+      "prodcutPrice":"3999",
+      "prodcutImg":"note.jpg",
+      "salePrice": "1234",
+      "productNum": "30",
+      "inventory": "8"
+    },
+    {
+      "productId":"10003",
+      "productName":"小米6",
+      "prodcutPrice":"2499",
+      "prodcutImg":"mi6.jpg",
+      "salePrice": "1234",
+      "productNum": "30",
+      "inventory": "8"
+    },
+    {
+      "productId":"10004",
+      "productName":"小米6",
+      "prodcutPrice":"2499",
+      "prodcutImg":"1.jpg",
+      "salePrice": "1234",
+      "productNum": "30",
+      "inventory": "8"
+    },
+    {
+      "productId":"10005",
+      "productName":"小米6",
+      "prodcutPrice":"2499",
+      "prodcutImg":"2.jpg",
+      "salePrice": "1234",
+      "productNum": "30",
+      "inventory": "8"
+    },
+    {
+      "productId":"10006",
+      "productName":"小米笔记本",
+      "prodcutPrice":"3999",
+      "prodcutImg":"note.jpg",
+      "salePrice": "1234",
+      "productNum": "30",
+      "inventory": "8"
+    },
+    {
+      "productId":"10007",
+      "productName":"小米6",
+      "prodcutPrice":"2499",
+      "prodcutImg":"mi6.jpg",
+      "salePrice": "1234",
+      "productNum": "30",
+      "inventory": "8"
+    },
+    {
+      "productId":"10008",
+      "productName":"小米6",
+      "prodcutPrice":"2499",
+      "prodcutImg":"1.jpg",
+      "salePrice": "1234",
+      "productNum": "30",
+      "inventory": "8"
+    },
+    {
+      "productId":"10009",
+      "productName":"小米6",
+      "prodcutPrice":"2499",
+      "prodcutImg":"2.jpg",
+      "salePrice": "1234",
+      "productNum": "30",
+      "inventory": "8"
+    },
+    {
+      "productId":"10010",
+      "productName":"小米6",
+      "prodcutPrice":"2499",
+      "prodcutImg":"3.jpg",
+      "salePrice": "1234",
+      "productNum": "30",
+      "inventory": "8"
+    },
+    {
+      "productId":"10011",
+      "productName":"小米6",
+      "prodcutPrice":"2499",
+      "prodcutImg":"4.jpg",
+      "salePrice": "1234",
+      "productNum": "30",
+      "inventory": "8"
+    },
+    {
+      "productId":"10012",
+      "productName":"小米6",
+      "prodcutPrice":"2499",
+      "prodcutImg":"5.jpg",
+      "salePrice": "1234",
+      "productNum": "30",
+      "inventory": "8"
+    }
+  ]
+}

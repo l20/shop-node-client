@@ -1,0 +1,173 @@
+color-dark  = #ee7a23
+color-light = #f39e5e
+
+aw-primary = #337ab7
+aw-success = #5cb85c
+aw-info =    #5bc0de
+aw-warning = #f0ad4e
+aw-danger =  #d9534f
+
+// 登录框
+.aw-login-modal 
+  .ivu-modal-body
+      padding 16px 20px
+
+.ivu-modal-header
+  padding-left 20px
+  padding-right 20px
+  border none
+
+.ivu-modal-content
+  border-radius 0
+
+.aw-login-btn
+  background color-dark
+  border-color color-dark
+  color #fff
+
+  &:not([disabled]):hover
+    background color-light
+    border-color color-light
+    color #fff
+    
+// 注册框
+.aw-regist-modal
+  .ivu-form-item
+    margin-bottom 15px!important
+    .ivu-form-item-label
+      padding-top 8px
+      padding-bottom 2px
+  .ivu-modal-body
+    padding-top 0
+
+.aw-reg-btn
+  margin-top 30px
+
+.aw-modal-username, .aw-modal-password
+  input
+    padding-left 36px
+    // padding-left 10px!important
+.ivu-modal-close
+  z-index 999
+
+.ivu-form-item
+  margin-bottom 30px
+
+.ivu-input-icon 
+  right: initial!important;
+
+.ivu-modal-footer
+  display none
+
+.aw-global-mask
+  position fixed
+  top 0
+  bottom 0
+  left 0
+  right 0
+  background-color rgba(55,55,55,.6)
+  height 100%
+  z-index 200
+
+.ivu-input, .ivu-btn
+  border-radius 0!important
+
+
+.aw-del-modal .ivu-modal-footer
+    display block
+    border none
+
+.aw-del-modal .ivu-btn-error
+  background aw-danger
+  border-color aw-danger
+  &:hover
+    border-color lighten(aw-danger, 10)
+    background lighten(aw-danger, 10)
+
+warring_style(fw)
+  if fw is true
+    font-weight bold
+  else
+    font-weight normal
+  text-align center
+  color aw-danger 
+
+.aw-warring-style
+  warring_style(true)
+
+.aw-del-modal
+  .ivu-modal-footer
+    text-align left 
+  .ivu-form .ivu-form-item-label
+    text-align left
+
+  .ivu-form-item
+    margin-bottom 0
+    .ivu-form-item-label
+      width: auto!important
+
+// .ivu-table-wrapper .ivu-table
+//   overflow: auto!important
+//   table
+//     width: 100%!important
+//     table-layout auto!important
+
+.aw-bread-nav
+  z-index 50!important
+
+.confirm
+    .ivu-modal-footer
+      display block!important
+      border none
+
+
+
+// input:focus
+  // outline 0
+input[type="text"], 
+input[type="number"], 
+input[type="password"], 
+// .ivu-input
+  border-top none
+  border-right none
+  border-left none
+  &:focus
+      box-shadow none
+  &:hover
+    border-color #ccc    
+
+.ivu-input-group-prepend
+  border-radius 0
+  width 32px
+  background rgba(0,0,0,0)
+  border-top none
+  border-right none
+  border-left none
+
+.ivu-form-item-error 
+  .ivu-input-group-prepend
+    border 1px solid ad_red
+    border-top none
+    border-right none
+    border-left none
+.ivu-form-item-error 
+  .ivu-input
+    // outline 0
+    border 1px solid ad_red
+    border-top none
+    border-right none
+    border-left none
+    &:focus
+      box-shadow none
+
+.cart-icon-warning
+  font-size 20px
+  margin-right 12px
+  color #ff9900
+
+.ivu-dropdown .ivu-select-dropdown
+  border-radius 0
+
+.ivu-dropdown .ivu-select-dropdown,
+.ivu-select-dropdown .dropdown-menu
+    padding 0!important

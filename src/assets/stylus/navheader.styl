@@ -1,0 +1,92 @@
+color-dark = #ee7a23
+  color-light = rgba(238, 188, 0, 0.7)
+
+  span
+    color color-dark
+    
+  .layout
+    border 1px solid #d7dde4
+    background #f5f7f9
+
+  .layout-logo
+    top 0
+    height 100%
+    width 232px
+    float left
+    position relative
+    a
+      // position relative
+      display inline-block
+      
+
+  .aw-header-nav
+    height 80px
+    z-index 200
+    // position relative
+  .layout-nav
+    height 100%
+    float right
+    transition top .3s ease-out
+
+  .navbar-brand-logo
+    top 50%
+    left 50px
+    width 230px
+    display block
+    margin-top -(60/2)px
+    position absolute
+
+  .aw-nav-cart
+    border none!important
+    cursor default!important
+  
+  .show-menu
+    font-size 30px
+    height 100%
+    line-height 80px
+    display none
+    height 100%
+    float right 
+
+  .navbar-cart-logo
+    font-size 34px
+    position relative
+    .ivu-badge-count
+      top -4px
+  .navbar-right-container
+    display flex
+    align-items center
+    .navbar-menu-container
+      display: box;
+      display: flex;  
+      box-pack: end;
+      justify-content: flex-end;
+      box-align: center;
+      align-items: center;
+      padding-top: 10px;
+      .navbar-link
+        position relative
+        transition color .3s ease-out
+        color initial
+        &:hover
+          color #ee7a23
+      .navbar-cart-container
+        margin-left 30px
+
+  .aw-error-tip
+    top 0
+    left 0    
+    width 100%
+    line-height 60px
+    text-align center
+
+  .aw-error-tip-text
+    margin-left 6px
+
+  .user-tips-content
+    ul
+      li
+        padding: 10px 5px
+        border-bottom 1px solid #eee
+        &:last-child
+          border none
