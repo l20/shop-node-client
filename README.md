@@ -1,7 +1,7 @@
 # Introduction
 
 > A mall full stack demo based on Vue2.0(front-end) & node(back-end).
-#### Notice: The back-end of this project is closed source.
+#### Notice: The back-end of this project is closed source,but you can use api.
 
 # [demo online](http://shop.alphagoo.cn)
 
