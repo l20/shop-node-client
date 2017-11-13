@@ -22,7 +22,8 @@ module.exports = {
     extensions: ['.js', '.vue', '.json'],
     alias: {
       'vue$': 'vue/dist/vue.esm.js',
-      '@': resolve('src')
+      '@': resolve('src'),
+      'stylus': resolve('src/assets/stylus')
     }
   },
   module: {
@@ -63,9 +64,13 @@ module.exports = {
           name: utils.assetsPath('fonts/[name].[hash:7].[ext]')
         }
       },
+      /**
+       * 多余的配置，引入此项无法在main.js入口中直接
+       * 使用import 'xxx.styl'方式引入stylus文件.
+       */
       {
-        test: /\.styl$/,
-        loader: 'style-loader!css-loader!stylus-loader?config=stylusOther',
+        // test: /\.styl$/,
+        // loader: 'style-loader!css-loader!stylus-loader?config=stylusOther',
       }
     ]
   }

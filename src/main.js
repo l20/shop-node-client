@@ -17,6 +17,7 @@ import 'iview/dist/styles/iview.css';
 import './assets/css/base.css';
 import './assets/css/product.css';
 import './assets/css/checkout.css';
+import 'stylus/index.styl';
 
 // custom global variables
 const URL = 'http://api.alphagoo.cn';
