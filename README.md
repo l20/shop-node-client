@@ -49,15 +49,6 @@ npm test
 ### cart
 <img src="https://github.com/l20/shop-node-client/blob/master/screenshot/cart.png" alt="cart">
 
-### address
-<img src="https://github.com/l20/shop-node-client/blob/master/screenshot/address.png" alt="address">
-
-### address
-<img src="https://github.com/l20/shop-node-client/blob/master/screenshot/address.png" alt="address">
-
-### successful payment
-<img src="https://github.com/l20/shop-node-client/blob/master/screenshot/succ.png" alt="successful">
-
 ## Admin page
 
 ### summary
