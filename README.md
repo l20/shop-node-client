@@ -37,7 +37,37 @@ npm run e2e
 npm test
 ```
 # Screenshot
+
+## Goods page
+
 ### home
+<img src="https://github.com/l20/shop-node-client/blob/master/screenshot/home.png" alt="home">
+
+### detail
+<img src="https://github.com/l20/shop-node-client/blob/master/screenshot/detail.png" alt="detail">
+
+### cart
+<img src="https://github.com/l20/shop-node-client/blob/master/screenshot/cart.png" alt="cart">
+
+### address
+<img src="https://github.com/l20/shop-node-client/blob/master/screenshot/address.png" alt="address">
+
+### address
+<img src="https://github.com/l20/shop-node-client/blob/master/screenshot/address.png" alt="address">
+
+### successful payment
+<img src="https://github.com/l20/shop-node-client/blob/master/screenshot/succ.png" alt="successful">
+
+## Admin page
+
+### summary
+<img src="https://github.com/l20/shop-node-client/blob/master/screenshot/admin-home.png" alt="home">
+
+### dashboard
+<img src="https://github.com/l20/shop-node-client/blob/master/screenshot/chart.png" alt="dashboard">
+
+### user list
+<img src="https://github.com/l20/shop-node-client/blob/master/screenshot/user.png" alt="user">
 
 # Credits
 This project uses several open source packages:
