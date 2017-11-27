@@ -40,7 +40,6 @@
 <script>
 import { mapGetters, mapActions } from 'vuex';
 import { hasProperty } from '@/assets/js/utils'
-
 export default {
     data() {
         return {
@@ -74,7 +73,8 @@ export default {
         if (this.user) 
             this.changeNavBread(['用户详情', '>', this.user.userName]);
         // this.activation(this);
-    }
+    },
+
 }
 </script>
 

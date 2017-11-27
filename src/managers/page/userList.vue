@@ -19,9 +19,8 @@
                 <Button v-if="user.role >= 50" type="success" icon="android-add" @click="routeTo">添加用户</Button>
             </FormItem>
         </Form> 
-        <s-table ref="user" class="user-list" :data="userList" :columns="tableColumns" stripe>
-        </s-table>
-          <div v-if="!isSearch" style="margin: 10px;overflow: hidden">
+        <Table ref="user" class="user-list" :data="userList" :columns="tableColumns" stripe></Table>
+        <div v-if="!isSearch" style="margin: 10px;overflow: hidden">
             <div style="text-align: center;">
                 <Page :total="count" :current="1" @on-change="changePage" :show-elevator="count >= 50"></Page>
             </div>
@@ -34,15 +33,7 @@
 <script>
 import { mapGetters, mapActions } from "vuex";
 import { substring, currency } from "@/assets/js/utils";
-import Dropdown from "iview/src/components/dropdown/dropdown";
-import DropdownItem from "iview/src/components/dropdown/dropdown-item";
-import DropdownMenu from "iview/src/components/dropdown/dropdown-menu";
-import tag from "iview/src/components/tag/tag";
-import Icon from "iview/src/components/icon/icon";
-import IButton from "iview/src/components/button/button";
-import STable from "iview/src/components/table/table";
-import Radio from "iview/src/components/radio/radio";
-import RadioGroup from "iview/src/components/radio/radio-group";
+
 const moment = require("moment");
 
 const URL = API + "/images/";
@@ -554,7 +545,7 @@ export default {
   },
   computed: {
     ...mapGetters(["user", "adm_mdVisual", "adm_confirm"]),
-    userList() {
+     userList() {
       if (!this.user){
         this.tableColumns = [];
         return [];
@@ -593,13 +584,15 @@ export default {
       });
       
       return this.userDataList
-    },
+    }, 
   },
   async mounted() {
     let data = await this.fetchUsers();
-    this.userDataList = this.userDataBuffer = data.userList;
-    this.count = data.count;
-    this.userDateFields = data.userList[0];
+    if (data) {
+      this.userDataList = this.userDataBuffer = data.userList;
+      this.count = data.count;
+      this.userDateFields = data.userList[0];
+    }
   },
   watch: {
     adm_confirm(val) {
@@ -740,17 +733,7 @@ export default {
       }
     },
   },
-  components: {
-    IButton,
-    Dropdown,
-    DropdownItem,
-    DropdownMenu,
-    RadioGroup,
-    STable,
-    Radio,
-    Icon,
-    tag,
-  }
+
 };
 function dateFm(date) {
   return Date.parse(date);

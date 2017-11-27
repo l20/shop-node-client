@@ -2,14 +2,19 @@ import Vue from 'vue';
 import Router from 'vue-router';
 import store from '../store';
 import vm from '../main';
+import { LoadingBar } from 'iview';
 
 Vue.use(Router);
-
+LoadingBar.config({
+  color: '#ee7a23',
+  failedColor: '#f0ad4e',
+  height: 3
+});
 export const router = new Router({
   mode: 'history',
   routes: [{
     path: '/',
-    name: 'Home',
+    // name: 'Home',
     components: {
       default: resolve => require(['../views/Home.vue'], resolve),
     },
@@ -32,7 +37,7 @@ export const router = new Router({
       props: (route) => ({ productId: route.params.productId }) // 函数式向组件传递pros
     }, {
       path: '/user',
-      name: 'user',
+      // name: 'user',
       component: resolve => require(['../views/user.vue'], resolve),
       beforeEnter: (to, from, next) => {
         if (store.getters.user) next();
@@ -43,7 +48,7 @@ export const router = new Router({
         component: resolve => require(['../views/UserDetail.vue'], resolve)
       }, {
         path: 'home',
-        name: 'home',
+        // name: 'home',
         component: resolve => require(['../views/UserDetail.vue'], resolve),
       }, {
         path: 'activate',
@@ -84,7 +89,7 @@ export const router = new Router({
     }]
   }, {
     path: '/admin',
-    name: "admin",
+    // name: "admin",
     component: resolve => require(['../managers/common/index.vue'], resolve),
     beforeEnter: async (to, from, next) => {
       await store.dispatch('checkLogin');
@@ -178,7 +183,8 @@ export const router = new Router({
 // 此周期vue还未实例化，所以拿不到vue实例
 router.beforeEach((to, from, next) => {
   store.dispatch("checkLogin");
-  store.dispatch("setLoadingFlag", true);
+  LoadingBar.start();
+  // store.dispatch("setLoadingFlag", true);
   next();
 });
 
@@ -187,6 +193,7 @@ router.afterEach((to, from) => {
   if (user && !user.activated) {
     // router.push({ path: '/user/activate' });
   }
-  store.dispatch("setLoadingFlag", false);
+  // store.dispatch("setLoadingFlag", false);
+  LoadingBar.finish();
   store.dispatch("setTips", { path: '/user/activate'});
 }); 

@@ -167,6 +167,7 @@
 
 <script>
 import { mapGetters, mapActions } from 'vuex';
+import Icon from "iview/src/components/icon/icon";
 import EditAddress from './EditAddress';
 import StepBar from './StepBar';
 
@@ -291,7 +292,10 @@ export default {
             }
         }
     },
-    components: { EditAddress, StepBar },
+    components: { 
+        EditAddress, 
+        StepBar
+     },
 }
 </script>
 

@@ -22,7 +22,7 @@
                         </span>
                         <span class="review_at">发表于　{{ dateFormat(comment.meta.createAt) }}</span>
                     </p>
-                    <i-form ref="reply" v-if="showReplyByIndex === indexParent" :model="replyValidate" inline>
+                    <Form ref="reply" v-if="showReplyByIndex === indexParent" :model="replyValidate" inline>
                         <Form-item prop="content" style="min-width:65%">
                             <Input 
                             type="textarea"
@@ -39,7 +39,7 @@
                             @click="submitReply({index: indexParent, toCom: true, cid: comment._id, to: comment.from._id })" 
                             type="primary">回复</Button>
                         </Form-item>
-                    </i-form>
+                    </Form>
                 </div>
                 <div class="review_cont review_reply"  v-for="(reply, index) in comment.reply" :id="'reply-' + (indexParent*10+index)"  :key="index">
                     <div class="review_reply_item clearfix" >
@@ -55,7 +55,7 @@
                             <a class="review_reply_del" v-if="user._id === reply.from._id || user.role > 30" @click="delThis({index: [indexParent, index], cid: comment._id, rid: reply._id})">删除</a>
                         </span>
                     </div>
-                    <i-form ref="reply2reply" v-if="showR2RByIndex === indexParent*10+index " :model="replyValidate" inline>
+                    <Form ref="reply2reply" v-if="showR2RByIndex === indexParent*10+index " :model="replyValidate" inline>
                         <Form-item prop="content" style="min-width:65%">
                             <Input 
                             type="textarea"
@@ -72,7 +72,7 @@
                             @click="submitReply({index: [indexParent, index], toCom: false, cid: comment._id, to: reply.from._id })" 
                             type="primary">回复</Button>
                         </Form-item>
-                    </i-form>
+                    </Form>
                 </div>
             </div>
         </div>
@@ -82,7 +82,7 @@
         </div>
         <div class="Comments-footer CommentEditor--normal"
         :class="{'CommentEditor--active': isEdit, 'commnet-leave': !isEdit}">
-            <i-form ref="formValidate" :model="formValidate" :rules="ruleValidate">
+            <Form ref="formValidate" :model="formValidate" :rules="ruleValidate">
                 <Form-item prop="content" >
                     <Input 
                     type="textarea"
@@ -100,7 +100,7 @@
                 <span v-if="!comLoading">评论</span>
                 <span v-else>提交...</span>
                 </Button>
-            </i-form>
+            </Form>
         </div>
         <Modal
         v-model="showNotice"
@@ -468,7 +468,8 @@ export default {
             const comments = data.comments;
             this.commentList = comments;
         }
-    }
+    },
+
 }
 
 </script>

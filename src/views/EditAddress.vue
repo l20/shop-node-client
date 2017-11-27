@@ -57,9 +57,7 @@
 </template>
 
 <script>
-
 import { mapGetters, mapActions } from 'vuex';
-
 export default {
     props: ['closeThis', 'address'],
     data() {
@@ -169,6 +167,7 @@ export default {
     },
     mounted() {
     },
+
 }
 
 </script>

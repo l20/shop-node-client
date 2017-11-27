@@ -36,6 +36,8 @@
 </template>
 
 <script>
+// import Row from "iview/src/components/grid/row";
+// import Col from "iview/src/components/grid/col";
 // manually
 import IEcharts from "vue-echarts-v3/src/lite";
 import "echarts/lib/chart/pie";
@@ -189,7 +191,9 @@ var lineStyle = {
 export default {
   name: "echarts",
   components: {
-    IEcharts
+    IEcharts,
+    // Row,
+    // Col,
   },
   data: () => ({
     line: {

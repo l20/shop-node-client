@@ -30,6 +30,13 @@
 <script>
 import { substring, currency } from "@/assets/js/utils";
 import { mapGetters, mapActions } from "vuex";
+// import Icon from "iview/src/components/icon/icon";
+// import Form from "iview/src/components/form/form";
+// import Input from "iview/src/components/input/input";
+// import Table from "iview/src/components/table/table";
+// import Modal from "iview/src/components/modal/modal";
+// import Button from "iview/src/components/button/button";
+// import FormItem from "iview/src/components/form/form-item";
 const URL = API + "/images/";
 const PAGE_SIZE = "";
 
@@ -385,7 +392,7 @@ export default {
         this.isSearch = true;
       }
     }
-  }
+  },
 };
 </script>
 

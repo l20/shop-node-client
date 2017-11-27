@@ -127,7 +127,8 @@ export default {
           this.signin('formInline');
         }
     });
-  }
+  },
+
 };
 </script>
 <style>

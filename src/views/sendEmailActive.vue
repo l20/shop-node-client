@@ -32,6 +32,7 @@
 </template>
 <script>
 import { mapGetters, mapActions } from "vuex";
+
 const _ = require("lodash/function");
 
 export default {
@@ -162,7 +163,8 @@ export default {
       this.changeNavBread(["用户详情", ">", this.user.userName, ">", "发送邮件激活"]);
     // this.activation(this);
       this.formInline.email = this.user.email;
-  }
+  },
+  
 };
 </script>
 <style lang="stylus" scoped>

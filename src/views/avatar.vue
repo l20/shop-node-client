@@ -121,7 +121,9 @@ export default {
         if(window.FileReader) this.usable = true;
   },
   computed: mapGetters(['showLoading', 'user', 'avatar']),
-  components: { cropper }
+  components: { 
+      cropper,
+  }
 }
 </script>
 

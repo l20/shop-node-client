@@ -1,7 +1,7 @@
 <template>
   <Modal class="aw-regist-modal" title="注册账户" v-model="mdIsShow" @on-cancel="handleReset('formInline')">
     <slot name="error-tip"></slot>
-    <i-form ref="formInline" :model="formInline" :rules="ruleInline" >
+    <Form ref="formInline" :model="formInline" :rules="ruleInline" >
       <FormItem label="邮箱" prop="email">
         <!-- <Input class="aw-modal-password" icon="email" v-model="formInline.email" placeholder="请输入邮箱"></Input> -->
         <AutoComplete
@@ -26,17 +26,18 @@
         <Input class="aw-modal-password" type="password" v-model="formInline.passwdCheck" icon="locked" placeholder="再次输入密码确认"></Input>
       </FormItem>
       <FormItem class="aw-reg-btn">
-        <i-button class="aw-login-btn" :loading="regSuccess" :disabled="!formValues" @click.native="handleSubmit('formInline')" long>提交</i-button>
+        <Button class="aw-login-btn" :loading="regSuccess" :disabled="!formValues" @click.native="handleSubmit('formInline')" long>提交</Button>
       </FormItem>
-    </i-form>
+    </Form>
     <div slot="footer"></div>
   </Modal>
 </template> 
 
 <script type="text/ecmascript-6">
 
-import { mapGetters } from 'vuex';
 import Vue from 'vue';
+import { mapGetters } from 'vuex';
+
 const  _ = require('lodash/function');
 // const object = require('lodash/fp/object');
 
@@ -241,7 +242,7 @@ export default {
     //       this.handleSubmit('formInline');
     //     }
     // });
-  }
+  },
 
 }
 </script>

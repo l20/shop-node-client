@@ -9,7 +9,13 @@
     "stage-2",
     "es2015"
   ],
-  "plugins": ["transform-runtime", "transform-vue-jsx"],
+  "plugins": ["transform-runtime", "transform-vue-jsx", [
+      "import",
+      {
+        "libraryName": "iview",
+        "libraryDirectory": "src/components"
+      }
+    ]],
   "env": {
     "test": {
       "presets": ["env", "stage-2"],

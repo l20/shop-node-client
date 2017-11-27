@@ -414,7 +414,8 @@ export default {
       // ... the code you wanna run to fetch data
       this.loading = false;
     }
-  }
+  },
+
 };
 </script>
 

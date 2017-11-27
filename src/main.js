@@ -1,17 +1,34 @@
 import Vue from 'vue';
 import App from './App';
 import axios from 'axios';
-import iView from 'iview';
 import store from './store'
-import {router} from './router';
+import { router } from './router';
 import permission from './purview';
-import IEcharts from 'vue-echarts-v3';
+// import IEcharts from 'vue-echarts-v3';
 import VueLazyload from 'vue-lazyload';
 import VueMarkdown from 'vue-markdown';
 import VueSocketio from 'vue-socket.io';
 import { currency } from './assets/js/utils';
 import VueQuillEditor from 'vue-quill-editor';
-import infiniteScroll from  'vue-infinite-scroll';
+import infiniteScroll from 'vue-infinite-scroll';
+import {
+  message,
+  Dropdown,
+  Progress,
+  Icon, tag,
+  DatePicker,
+  Breadcrumb,
+  Form, Input,
+  Modal, Menu,
+  Table, Page,
+  Card, Upload,
+  AutoComplete,
+  Radio, Button,
+  Alert, Notice,
+  Poptip, Tooltip,
+} from 'iview';
+import { Row, Col } from 'iview/src/components/grid';
+
 // styles
 import 'iview/dist/styles/iview.css';
 import './assets/css/base.css';
@@ -29,9 +46,48 @@ Object.defineProperty(window, "API", {
   value: URL // 'http://localhost:5000'  current server url
 });
 
+// iview use
+Vue.component('Row', Row);
+Vue.component('Col', Col);
+Vue.component('Tag', tag);  
+Vue.component('ICol', Col);
+Vue.component('Page', Page);
+Vue.component('Icon', Icon);
+Vue.component('Form', Form);
+Vue.component('Menu', Menu);
+Vue.component('Card', Card);
+Vue.component('IForm', Form);
+Vue.component('Modal', Modal);
+Vue.component('Alert', Alert);
+Vue.component('Input', Input);
+Vue.component('Table', Table);
+Vue.component('Radio', Radio);
+// Vue.component('STable', Table);
+Vue.component('Upload', Upload);
+Vue.component('Button', Button);
+Vue.component('IButton', Button);
+Vue.component('Poptip', Poptip);
+Vue.component('Tooltip', Tooltip);
+Vue.component('Submenu', Menu.Sub);
+Vue.component('Progress', Progress);
+Vue.component('Dropdown', Dropdown);
+Vue.component('FormItem', Form.Item);
+Vue.component('MenuItem', Menu.Item);
+Vue.component('MenuGroup', Menu.Group);
+Vue.component('DatePicker', DatePicker);
+Vue.component('Breadcrumb', Breadcrumb);
+Vue.component('RadioGroup', Radio.Group);
+Vue.component('AutoComplete', AutoComplete);
+Vue.component('DropdownItem', Dropdown.Item);
+Vue.component('DropdownMenu', Dropdown.Menu);
+Vue.component('BreadcrumbItem', Breadcrumb.Item);
+Vue.prototype.$Modal = Modal;
+Vue.prototype.$Notice = Notice;
+Vue.prototype.$Message = message; 
+
 // plugins apply
-Vue.use(iView);
-Vue.use(IEcharts);
+// Vue.use(iView);
+// Vue.use(IEcharts);
 Vue.use(VueLazyload);
 Vue.use(VueMarkdown);
 Vue.use(infiniteScroll);
@@ -59,7 +115,7 @@ Vue.filter("currency", currency);
  * 跨域而报错。
  */
 Vue.prototype.$http = axios;
-// axios.defaults.withCredentials = true;  // 要发送cookie此项必须设为true
+axios.defaults.withCredentials = true;  // 要发送cookie此项必须设为true
 // axios.defaults.baseURL = URL;
 
 // http respones interceptors
@@ -72,7 +128,7 @@ axios.interceptors.response.use(function (response) {
   }
   // demo intercept
   if (10086 === res.status) {
-    alert( res.message)
+    alert(res.message)
   }
   return response;
 }, function (error) {
@@ -89,4 +145,4 @@ const options = {
 };
 
 // Vue instance
-export default  new Vue(options);
+export default new Vue(options);

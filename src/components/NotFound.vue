@@ -6,7 +6,7 @@
                     <Menu class="aw-header-nav" mode="horizontal">
                         <div class="layout-logo">
                             <a href="/">
-                                <img class="navbar-brand-logo" src="/static/images/logo.png">
+                                <logo></logo>
                             </a>
                         </div>
                     </Menu>
@@ -28,6 +28,7 @@
 </template>
 
 <script>
+import Logo from './Logo.js';
 import NavFooter from './NavFooter';
 
 export default {
@@ -47,7 +48,7 @@ export default {
             }
         }, SEC);
     },
-    components: { NavFooter }
+    components: { NavFooter, Logo }
 }
 
 </script>

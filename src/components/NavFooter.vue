@@ -19,7 +19,7 @@
               <a  target="_blank" href="http://www.miitbeian.gov.cn/">
                 京ICP备17052365号-1
               </a>
-              <a href="http://resume.alphagoo.cn" target="_blank">
+              <a href="http://static.alphagoo.cn/resume" target="_blank">
                 关于我
               </a>
             </div>

@@ -3,11 +3,6 @@
         <img class="loading-anmt" src="/static/loading-svg/loading-cylon-red.svg">
     </div>
 </template>
-
-<script>
-    export default {}
-</script>
-
 <style lang="stylus" scoped>
     .loading-container
         background #f5f7fc

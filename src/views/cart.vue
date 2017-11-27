@@ -228,6 +228,7 @@
 
 <script>
 import { mapGetters, mapActions } from "vuex";
+
 import { currency } from "@/assets/js/utils";
 import axios from "axios";
 export default {
@@ -396,6 +397,6 @@ export default {
       if (!vm.user) vm.$router.push("*");
       vm.changeNavBread(["购物车"]);
     });
-  }
+  },
 };
 </script>

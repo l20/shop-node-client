@@ -1,7 +1,7 @@
 <template>
   <Modal class="aw-login-modal" :title="title" v-model="mdIsShow" @on-cancel="handleReset('formInline')">
     <slot name="error-tip"></slot>
-    <i-form ref="formInline" :model="formInline" :rules="ruleInline">
+    <Form ref="formInline" :model="formInline" :rules="ruleInline">
       <Form-item prop="userName">
         <Input class="aw-modal-username" v-model="formInline.userName" icon="person" autocomplete="on" placeholder="在此输入账号"></Input>
       </Form-item>
@@ -9,17 +9,17 @@
         <Input class="aw-modal-password" v-model="formInline.userPwd" type="password" icon="locked" autocomplete="on" placeholder="在此输入密码"></Input>
       </Form-item>
       <Form-item>
-        <i-button class="aw-login-btn" type="success" @click.native="handleSubmit('formInline')" long>{{title}}</i-button>
+        <Button class="aw-login-btn" type="success" @click.native="handleSubmit('formInline')" long>{{title}}</Button>
       </Form-item>
-    </i-form>
+    </Form>
     <div slot="footer"></div>
   </Modal>
 </template> 
 
 <script type="text/ecmascript-6">
 
-import { mapGetters } from 'vuex';
 import Vue from 'vue';
+import { mapGetters } from 'vuex';
 
 export default {
   props: [
@@ -90,7 +90,7 @@ export default {
           this.handleSubmit('formInline');
         }
     });
-  }
+  },
 
 }
 </script>
