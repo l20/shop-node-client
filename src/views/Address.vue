@@ -214,11 +214,13 @@ export default {
             }
         },
         routeTo() {
+            
             if (!this.selectedAddrId) {
                 this.$Message.error("未选择地址!");
                 return;
             }
-            this.$router.push({path:'orderConfirm',query:{'addressId':this.selectedAddrId}});
+
+            this.$router.push({path:'orderConfirm', query:{'addressId':this.selectedAddrId}});
         },
         delAddressConfirm(id) {
             this.addressId = id;

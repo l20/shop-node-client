@@ -74,6 +74,7 @@ export const router = new Router({
       path: '/orderConfirm',
       name: 'orderConfirm',
       component: resolve => require(['../views/OrderConfirm.vue'], resolve),
+      props: (route) => ({ addressId: route.query.addressId }),
       beforeEnter: (to, from, next) => {
         if (store.getters.user) next();
         else router.push({ path: '*' });

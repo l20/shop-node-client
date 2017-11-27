@@ -96,6 +96,7 @@ import StepBar from './StepBar';
 import { mapGetters, mapActions } from 'vuex';
 
 export default {
+    props: ['addressId'],
     data() {
         return {
             shipping: 12,
@@ -107,7 +108,7 @@ export default {
     },
     computed: mapGetters(['cartList']),
     created() {
-        if (!this.$router.query) {
+        if (!this.addressId) {
             this.$router.go(-1);   
             this.$Message.error("未选择地址!");
             return;
